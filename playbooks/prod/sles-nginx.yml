@@ -12,7 +12,7 @@
       state: started
       enabled: yes
     become: yes
-   - name: copy the content of the web site
+  - name: copy the content of the web site
     copy:
       src: /home/ansible/ansibledemo/playbooks/prod/nginx/static-site-src/
       dest: /usr/share/nginx/html/
