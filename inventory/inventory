@@ -1,0 +1,22 @@
+---
+webservers:
+  hosts:
+    172.16.10.120:
+    172.16.10.116:
+
+sles15:
+  hosts:
+    172.16.10.120:
+
+centosservers:
+  hosts:
+    172.16.10.116:
+
+nginxsles:
+  hosts:
+    172.16.10.120:
+
+nginxcentos:
+  hosts:
+    172.16.10.116:
+
