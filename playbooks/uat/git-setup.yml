@@ -1,0 +1,14 @@
+--- # install git on target hosts
+- hosts: all
+  become: yes
+  tasks:
+  - name: install git CentOS
+    yum:
+      name: git
+      state: latest
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
+   - name: install git SUSE
+    zypper:
+      name: git-core
+      state: latest
+    when: ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'
