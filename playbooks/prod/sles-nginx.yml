@@ -14,7 +14,7 @@
     become: yes
   - name: copy the content of the web site
     copy:
-      src: /home/ansible/ansibledemo/playbooks/prod/nginx/static-site-src/index.html
+      src: /home/ansible/ansibledemo/playbooks/prod/nginx/static-site-src-sles/
       dest: /srv/www/htdocs/
   - name: restart nginx
     service:
