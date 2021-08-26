@@ -12,12 +12,7 @@
       state: started
       enabled: yes
     become: yes
-  - name: allow all access to tcp port 80
-    firewalld:
-      port: 80/tcp
-      zone: public
-      state: enabled
-  - name: copy the content of the web site
+   - name: copy the content of the web site
     copy:
       src: /home/ansible/ansibledemo/playbooks/prod/nginx/static-site-src/
       dest: /usr/share/nginx/html/
