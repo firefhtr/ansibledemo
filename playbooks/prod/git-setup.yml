@@ -7,12 +7,12 @@
       name: git
       state: latest
     when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
-   - name: install git SUSE
+  - name: install git SUSE
     zypper:
       name: git-core
       state: latest
     when: ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'
-      - name: install git Ubuntu
+  - name: install git Ubuntu
     apt:
       name: git
       state: latest
