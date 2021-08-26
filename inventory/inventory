@@ -19,4 +19,3 @@ nginxsles:
 nginxcentos:
   hosts:
     172.16.10.116:
-
