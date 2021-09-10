@@ -1,0 +1,9 @@
+--- # install git on Centos target hosts
+- hosts: centos7
+  become: yes
+  tasks:
+  - name: install git CentOS
+    yum:
+      name: git
+      state: latest
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
