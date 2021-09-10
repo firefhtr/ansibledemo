@@ -1,5 +1,5 @@
 --- # install git on Centos target hosts
-- hosts: centos7
+- hosts: centosservers
   become: yes
   tasks:
   - name: install git CentOS
