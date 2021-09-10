@@ -1,0 +1,9 @@
+--- # install git on SLES target hosts
+- hosts: sles15
+  become: yes
+  tasks:
+  - name: install git SUSE
+    zypper:
+      name: git-core
+      state: latest
+    when: ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'
