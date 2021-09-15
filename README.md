@@ -1,14 +1,14 @@
-# Small Ansible playbook demo for SUSE Manager
+#Small Ansible playbook demo for SUSE Manager
 
 
-Background:
+##Background:
 
 This repository contains some sample Ansible playbooks that can be used for a SUSE Manager Lab for 
 learning or a quick demo.
  
 Note at the this time, this feature within SUSE Manager is marked as Tech Preview.
 
-Setting up the environment:
+##Setting up the environment:
 
 You will need the following devices in your lab:
     1. One ControlNode - I used SLES15-SP3 as the base Operating System. The ansible package will be provided 
@@ -16,11 +16,11 @@ You will need the following devices in your lab:
     2. At least one (1) target device, in my lab I have setup up 3,  1 device for each of the 
        following Operating Systems: SLES15 Sp3, CentOS 7 and Ubuntu 18.04.
 
-Device requirements:
+##Device requirements:
 
 The ControlNode must be able to ssh as Root to each target device without password (ssh-copy-id).
 
-File Location:
+##File Location:
 
 This is dealers choice as you will be setting the location of both the playbooks and inventory files
 within SUSE Manager.  
@@ -30,7 +30,7 @@ are any packages to be installed as part of the playbook, then the devices will 
 access to those packages via their own repositories.  This can create unknown issues as version
 maybe different.
 
-Playbooks:
+##Playbooks:
 
 The playbooks in this repository is split amongst the different directories based on environment and
 OS versions with the exception of the directory called 'general'.  This directory is design to show 
