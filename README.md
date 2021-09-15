@@ -1,5 +1,6 @@
 ![SUSE Manager Logo](/images/susemanagericon.jpg)
-Format: ![Alt Text](url)
+
+![https://www.suse.com/products/suse-manager/](url)
 # Small Ansible playbook demo for SUSE Manager
 
 
