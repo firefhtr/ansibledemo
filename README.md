@@ -1,3 +1,5 @@
+![Image of SUSE Manager]
+
 # Small Ansible playbook demo for SUSE Manager
 
 
