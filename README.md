@@ -1,15 +1,14 @@
 ![SUSE Manager Logo](/images/susemanagericon.jpg)
 
 ![https://www.suse.com/products/suse-manager/](url)
-# Small Ansible playbook demo for SUSE Manager
-
+# Small Ansible playbook demo for SUSE Manager 4.2
 
 ## Background:
 
-This repository contains some sample Ansible playbooks that can be used for a SUSE Manager Lab for 
+This repository contains some sample Ansible playbooks that can be used for a SUSE Manager 4.2 Lab for 
 learning or a quick demo.
  
-Note at the this time, this feature within SUSE Manager is marked as Tech Preview.
+Note at the this time, this feature within SUSE Manager 4.2 is marked as Tech Preview.
 
 ## Setting up the environment:
 
@@ -38,5 +37,9 @@ maybe different.
 The playbooks in this repository is split amongst the different directories based on environment and
 OS versions with the exception of the directory called 'general'.  This directory is design to show 
 the ability to deploy a single playbook across different Operating Systems.
+
+## Getting Started:
+Now that your environment is setup, here is a link to the documentation on how to setup this up in 
+SUSE Manager ![https://documentation.suse.com/suma/4.2/en/suse-manager/administration/ansible-integration.html](url)
 
 Good luck
