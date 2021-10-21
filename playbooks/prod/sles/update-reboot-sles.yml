@@ -1,18 +1,16 @@
---- Update sles and reboot when done
 - hosts: sles15
   become: yes
-    become_user: root
-    gather_facts: no
-    tasks:
-      - name: Update all packages on OpenSUSE/SUSE Linux
-        zypper:
-          name: '*'
-          state: latest
-      - name: Run update as sometimes a second run is required
-        zypper:
-          name: '*'
-          state: latest
-      - name: Rebooting host(s).
-        shell: sleep 2 && /sbin/shutdown -r now "Reboot required for updated kernel." && sleep 2
-        poll: 0
-        ignore_errors: true
+  gather_facts: no
+  tasks:
+    - name: Update all packages on OpenSUSE/SUSE Linux
+      zypper:
+        name: '*'
+        state: latest
+    - name: Run update as sometimes a second run is required
+      zypper:
+        name: '*'
+        state: latest
+    - name: Rebooting host(s).
+      shell: sleep 2 && /sbin/shutdown -r now "Reboot required for updated kernel." && sleep 2
+      poll: 0
+      ignore_errors: true
