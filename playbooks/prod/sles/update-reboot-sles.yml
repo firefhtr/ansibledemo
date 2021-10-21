@@ -1,17 +1,9 @@
---- # Update and Reboot SLES
-- hosts: sles
+--- # install updates on SLES target hosts
+- hosts: sles15
   become: yes
-  gather_facts: no
   tasks:
-    - name: Update all packages on OpenSUSE/SUSE Linux
-      zypper:
-        name: '*'
-        state: latest
-    - name: Run update as sometimes a second run is required
-      zypper:
-        name: '*'
-        state: latest
-    - name: Rebooting host(s).
-      shell: sleep 2 && /sbin/shutdown -r now "Reboot required for updated kernel." && sleep 2
-      poll: 0
-      ignore_errors: true
+  - name: install updates SUSE
+    zypper:
+      name: "*"
+      state: latest
+    when: ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'
