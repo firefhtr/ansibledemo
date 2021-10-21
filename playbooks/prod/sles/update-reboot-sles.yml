@@ -1,5 +1,5 @@
 --- Update sles and reboot when done
-- hosts: all
+- hosts: sles15
   become: yes
     become_user: root
     gather_facts: no
