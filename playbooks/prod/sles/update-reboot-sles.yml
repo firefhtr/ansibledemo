@@ -1,4 +1,4 @@
---- # install updates on SLES target hosts
+--- #install updates on SLES target hosts
 - hosts: sles15
   become: yes
   tasks:
