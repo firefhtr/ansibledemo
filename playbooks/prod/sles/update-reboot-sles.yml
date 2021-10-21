@@ -1,4 +1,5 @@
-- hosts: sles15
+--- # Update and Reboot SLES
+- hosts: sles
   become: yes
   gather_facts: no
   tasks:
