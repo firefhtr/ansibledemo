@@ -1,5 +1,5 @@
 --- #install updates on SLES target hosts
-- hosts: sles15
+- hosts: testsles
   become: yes
   tasks:
   - name: install updates SUSE
