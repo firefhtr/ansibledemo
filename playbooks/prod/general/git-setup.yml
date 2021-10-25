@@ -1,5 +1,5 @@
 --- # install git on target hosts
-- hosts: all
+- hosts: dev
   become: yes
   tasks:
   - name: install git CentOS
@@ -12,9 +12,3 @@
       name: git-core
       state: latest
     when: ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'
-  - name: install git Ubuntu
-    apt:
-      name: git
-      state: latest
-      update_cache: yes
-    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
