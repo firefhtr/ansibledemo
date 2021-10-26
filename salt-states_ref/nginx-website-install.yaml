@@ -1,0 +1,16 @@
+# added reload to service
+
+install_nginx:
+  pkg.installed:
+    - name: nginx
+  service.running:
+    - name: nginx
+    - enable: True
+    - reload: True
+deploy html configuration:
+  file.recurse:
+    - name: "/srv/www/htdocs"
+    - source: salt://demo-nginx
+    - makedirs: True
+    - replace: True
+    - clean: True

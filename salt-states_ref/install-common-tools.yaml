@@ -1,0 +1,7 @@
+# Install common tools
+
+install_common_tools:
+  pkg.latest:
+    - pkgs:
+      - dos2unix
+      - ethtool

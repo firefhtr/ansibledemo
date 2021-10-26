@@ -1,0 +1,16 @@
+# Install latest packages - reboot if needed
+
+update_pkg:
+  pkg.uptodate:
+    - refresh : True
+
+int_reboot_if_needed:
+  cmd.run:
+    - name: shutdown -r +5
+{%- if grains['os_family'] == 'RedHat' and grains['osmajorrelease'] >= 8 %}
+    - onlyif: 'dnf -q needs-restarting -r; [ $? -eq 1 ]'
+{%- elif grains['os_family'] == 'RedHat' and grains['osmajorrelease'] <= 7 %}
+    - onlyif: 'needs-restarting -r; [ $? -eq 1 ]'
+{%- else %}
+    - onlyif: 'zypper ps -s; [ $? -eq 102 ]'
+{%- endif %}
