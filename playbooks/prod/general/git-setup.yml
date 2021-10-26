@@ -1,6 +1,7 @@
 --- # install git on target hosts
 - hosts: dev
   become: yes
+  ignore_errors: yes
   tasks:
   - name: install git CentOS
     yum:
