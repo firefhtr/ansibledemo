@@ -2,6 +2,7 @@
 - hosts: dev
   become: yes
   ignore_errors: yes
+  gather_facts: False
   tasks:
   - name: install git CentOS
     yum:

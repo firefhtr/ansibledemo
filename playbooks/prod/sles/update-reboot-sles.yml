@@ -1,6 +1,7 @@
 --- #install updates on SLES target hosts
 - hosts: testsles
   become: yes
+  gather_facts: False
   tasks:
   - name: install updates SUSE
     zypper:

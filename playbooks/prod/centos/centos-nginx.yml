@@ -1,6 +1,7 @@
 --- #Install nginx on target host
 - hosts: nginxcentos
   become: yes
+  gather_facts: False
   tasks:
   - name: install nginx
     yum:

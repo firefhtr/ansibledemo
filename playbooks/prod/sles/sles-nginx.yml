@@ -1,6 +1,7 @@
 --- # install nginx on target host
 - hosts: nginxsles
   become: yes
+  gather_facts: False
   tasks:
   - name: install nginx
     zypper:
