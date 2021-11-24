@@ -1,7 +1,6 @@
 --- # install git on Centos target hosts
 - hosts: centosservers
   become: yes
-  gather_facts: False
   tasks:
   - name: install git CentOS
     yum:
