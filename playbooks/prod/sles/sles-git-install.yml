@@ -1,7 +1,6 @@
 --- # install git on SLES target hosts
 - hosts: sles15
   become: yes
-  ignore_errors: yes
   tasks:
   - name: install git SUSE
     zypper:
