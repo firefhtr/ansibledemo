@@ -1,0 +1,26 @@
+---
+all:
+  hosts:
+    centos7.suselabs.com:
+    sles15sp3-testbed.suselabs.com:
+  children:
+    webservers:
+      hosts:
+        sles15sp3-testbed.suselabs.com:
+        centos7.suselabs.com:
+    sles15:
+      hosts:
+        sles15sp3-testbed.suselabs.com:
+    nginxsles:
+      hosts:
+        sles15sp3-testbed.suselabs.com:
+    centosservers:
+      hosts:
+        centos7.suselabs.com:
+    nginxcentos:
+      hosts:
+        centos7.suselabs.com:
+    dev:
+      hosts:
+        centos7.suselabs.com:
+        sles15sp3-testbed.suselabs.com:
