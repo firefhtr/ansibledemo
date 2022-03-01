@@ -89,24 +89,24 @@
       - no_reboot_needed
       - restrict_strategy
       - rpm_verify_permissions
-- name: Gather the package facts
-  package_facts:
-    manager: auto
-  tags:
-    - CCE-85570-0
-    - CJIS-5.6.2.1
-    - DISA-STIG-SLES-15-020220
-    - NIST-800-171-3.5.6
-    - NIST-800-53-CM-6(a)
-    - NIST-800-53-IA-5(1)(d)
-    - NIST-800-53-IA-5(f)
-    - PCI-DSS-Req-8.2.4
-    - accounts_maximum_age_login_defs
-    - low_complexity
-    - low_disruption
-    - medium_severity
-    - no_reboot_needed
-    - restrict_strategy
+  - name: Gather the package facts
+    package_facts:
+      manager: auto
+    tags:
+      - CCE-85570-0
+      - CJIS-5.6.2.1
+      - DISA-STIG-SLES-15-020220
+      - NIST-800-171-3.5.6
+      - NIST-800-53-CM-6(a)
+      - NIST-800-53-IA-5(1)(d)
+      - NIST-800-53-IA-5(f)
+      - PCI-DSS-Req-8.2.4
+      - accounts_maximum_age_login_defs
+      - low_complexity
+      - low_disruption
+      - medium_severity
+      - no_reboot_needed
+      - restrict_strategy
 
   - name: XCCDF Value var_accounts_maximum_age_login_defs # promote to variable
     set_fact:
