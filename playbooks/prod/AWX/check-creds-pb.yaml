@@ -1,0 +1,4 @@
+- hosts: all
+  tasks:
+  - name: check device hostname
+    ansible.builtin.shell: hostname
