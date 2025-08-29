@@ -1,5 +1,0 @@
-- hosts: localhost
-  tasks:
-  - name: debug
-    debug:
-      msg: "Playbook from github - test AWX"
