@@ -11,7 +11,7 @@ all:
       hosts:
         mlm-ansible.suselabs.com:
         awx1.suselabs.com:
-        awx2.suselabs.com
+        awx2.suselabs.com:
     nginxsles:
       hosts:
         cert-server.suselabs.com:
