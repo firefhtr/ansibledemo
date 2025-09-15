@@ -3,7 +3,7 @@ all:
   hosts:
     mlm-ansible.suselabs.com:
     rocky9-n1.suselabs.com:
-    cert-server.suselabs.com
+    cert-server.suselabs.com:
   children:
     sles15:
       hosts:
