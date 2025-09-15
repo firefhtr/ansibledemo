@@ -4,10 +4,14 @@ all:
     mlm-ansible.suselabs.com:
     rocky9-n1.suselabs.com:
     cert-server.suselabs.com:
+    awx1.suselabs.com:
+    awx2.suselabs.com:
   children:
     sles15:
       hosts:
         mlm-ansible.suselabs.com:
+        awx1.suselabs.com:
+        awx2.suselabs.com
     nginxsles:
       hosts:
         cert-server.suselabs.com:
@@ -21,3 +25,7 @@ all:
       hosts:
         rocky9-n1.suselabs.com:
         mlm-ansible.suselabs.com:
+    k3s:
+      hosts:
+        awx1.suselabs.com:
+        awx2.suselabs.com:
