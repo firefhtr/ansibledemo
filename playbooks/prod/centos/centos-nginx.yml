@@ -1,5 +1,5 @@
 --- #Install nginx on target host
-- hosts: nginxcentos
+- hosts: nginxrocky
   become: yes
     tasks:
   - name: install nginx
